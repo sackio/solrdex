@@ -1,27 +1,20 @@
-# solrdex [![Build Status](https://secure.travis-ci.org/ben/solrdex.png?branch=master)](http://travis-ci.org/ben/solrdex)
+# solrdex
 
-Use Solr as a secondary index and search engine
+Use Solr as a secondary index and search engine. This module is a quick, no-frills way to get data into Solr for full-text searching and other features where Solr provides a useful boost over SQL and noSQL databases alone.
 
 ## Getting Started
 Install the module with: `npm install solrdex`
 
 ```javascript
-var solrdex = require('solrdex');
-solrdex.awesome(); // "awesome"
+var Solrdex = new require('solrdex')(options);
+
+Solrdex.add(docs, options, callback); //accepts individual documents or array
+Solrdex.getByIds(ids, options, callback); //accepts individual ids or array
+Solrdex.delete(ids, options, callback); //accepts individual ids or array
+Solrdex.textSearch(query, {qf: fields}, callback); //accepts array or object for fields, along with other edismax options
+
 ```
 
-## Documentation
-_(Coming soon)_
-
-## Examples
-_(Coming soon)_
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Release History
-_(Nothing yet)_
-
 ## License
-Copyright (c) 2014 Ben Sack  
+Copyright (c) 2014 Ben Sack
 Licensed under the MIT license.
