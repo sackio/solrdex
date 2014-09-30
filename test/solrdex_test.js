@@ -1,6 +1,6 @@
 'use strict';
 
-var Solrdex = new require('../lib/solrdex.js')()
+var Solrdex = new require('../lib/solrdex.js')({'commit': true})
   , Async = require('async')
   , Belt = require('jsbelt')
   , _ = require('underscore')
