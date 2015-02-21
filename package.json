@@ -1,7 +1,7 @@
 {
   "name": "solrdex",
   "description": "Use Solr as a secondary index and search engine",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/sackio/solrdex",
   "author": {
     "name": "Ben Sack",

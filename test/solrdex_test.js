@@ -1,9 +1,15 @@
 'use strict';
 
-var Solrdex = new require('../lib/solrdex.js')({'commit': true})
+var Optionall = require('optionall')
+  , Path = require('path')
+  , O = new Optionall({
+                       '__dirname': Path.resolve(module.filename + '/../..')
+                     , 'file_priority': ['package.json', 'environment.json', 'config.json']
+                     })
   , Async = require('async')
   , Belt = require('jsbelt')
   , _ = require('underscore')
+  , Solrdex = new require('../lib/solrdex.js')(O)
 ;
 
 /*
